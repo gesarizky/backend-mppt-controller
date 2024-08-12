@@ -1,0 +1,259 @@
+{
+  "info": {
+    "_postman_id": "7ed2505c-9074-46eb-925b-22ea716e78c4",
+    "name": "Mppt control",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26190900"
+  },
+  "item": [
+    {
+      "name": "Database MPPT",
+      "item": [
+        {
+          "name": "View MPPT",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/mppt",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["mppt"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete MPPT",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2121/mppt",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2121",
+              "path": ["mppt"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add MPPT",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"mppt_sn\":\"exampeMPPT001\",\r\n    \"mppt_ip\":\"200.10.2.0\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:2222/mppt",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["mppt"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Fetching",
+      "item": [
+        {
+          "name": "MPPT System Data",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/get-system-data?mppt_ip=200.10.2.230",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["get-system-data"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "MPPT User Network",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/get-user-network",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["get-user-network"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Controller",
+      "item": [
+        {
+          "name": "Set Reboot",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/set-reboot?mppt_ip=200.10.2.230",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["set-reboot"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Set Factory Reset",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/set-factory-reset?mppt_ip=200.10.2.230",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["set-factory-reset"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Set All Module on",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/set-all-module-on?mppt_ip=200.10.2.230",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["set-all-module-on"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Set All Module off",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/set-all-module-off?mppt_ip=200.10.2.230",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["set-all-module-off"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Set Sync System",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:2222/set-sync-system?mppt_ip=200.10.2.230&voltage=300000&total_current=10000",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["set-sync-system"],
+              "query": [
+                {
+                  "key": "mppt_ip",
+                  "value": "200.10.2.230"
+                },
+                {
+                  "key": "voltage",
+                  "value": "300000"
+                },
+                {
+                  "key": "total_current",
+                  "value": "10000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Set User Network",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n    \"default_ip\": \"192.168.2.0\" ,\r\n    \"ssid\" : \"yourwifi\",\r\n    \"pass\" : \"yourpassword\",\r\n    \"ip\" : \"200.10.2.10\",\r\n    \"gateway\" : \"200.10.2.1\",\r\n    \"subnet\" : \"255.255.255.0\",\r\n    \"server\" : 1,\r\n    \"mode\" : 2\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:2222/set-user-network",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "2222",
+              "path": ["set-user-network"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
