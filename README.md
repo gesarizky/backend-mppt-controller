@@ -38,12 +38,12 @@
 
 ### Controller
 
-- `POST /set-reboot` - set reboot mppt
-- `POST /set-factory-reset` - set factory reset mppt
-- `POST /set-all-module-on` - Buy a product
-- `POST /set-all-module-off` - Buy a product
-- `POST /set-sync-system` - Buy a product
-- `POST /set-user-network` - Buy a product
+- `POST /set-reboot` - Set reboot mppt
+- `POST /set-factory-reset` - Set factory reset mppt
+- `POST /set-all-module-on` - Set module on
+- `POST /set-all-module-off` - Set module off
+- `POST /set-sync-system` - Set sync system
+- `POST /set-user-network` - Set user Network
 
     ```bash
     { 
